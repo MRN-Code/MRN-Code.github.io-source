@@ -6,7 +6,8 @@ tags:
 Note: this is a repost from [cdaringe.net](http://cdaringe.com/managing-application-dates/)
 
 Managing date and times has long been trouble for every application developer.  In many cases, a simple app only cares about datetime resolution at the `day` level.  However, to many applications, higher time resolution is critical.  In these applications, a finer, more granular time-unit resolution may be highly desirable.  The difficulties in managing time emerge in the realm of relativity.   If an application, its users, and its dependent infrastructure are spread across timezones, synchronizing a chronological history of events may prove difficult if you haven't designed your system to manage time full well.  This is discussion may be old hat for many, but a painful reality for many apps.
-![at one time, there are many times]( 2015/06/24/Managing-Application-Dates-and-Times/Universal_Dial_Plate_or_Times_of_all_Nations_1854.png )
+
+{% asset_img Universal_Dial_Plate_or_Times_of_all_Nations_1854.png Time After Time... %}
 
 ## why is it difficult?
 It doesn't have to be, actually.  The "difficult" aspects of managing time are generally designer oversight.  Two common oversights that I am personally guilty of are:

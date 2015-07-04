@@ -10,7 +10,7 @@ Maybe it is just me, but I had a difficult time launching the console of my
 guest VMs using the VMware Web Client. Here is how I eventually got it working
 on Windows 10 and Chrome 43.x.
 
-{% asset_img launch.png 50 50 title %}
+{% asset_img launch.png Launch VMWare Web Client %}
 
 ## Background
 
