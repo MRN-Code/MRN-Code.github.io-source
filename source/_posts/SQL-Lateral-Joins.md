@@ -31,7 +31,7 @@ VACUUM ANALYZE rand_table;
 VACUUM ANALYZE series_table;
 ```
 
-## Test
+## Test:
 Let's count how many instances of `'010170'` there are in `rand_table`.  Then we'll LEFT JOIN that to the `series_table`.  Like, I said, super contrived...
 ```
 SELECT
@@ -65,7 +65,7 @@ LEFT JOIN (
 WHERE st.id = 10170
 ```
 
-## Clean Up
+## Clean Up:
 ```
 DROP TABLE rand_table;
 DROP TABLE series_table;
