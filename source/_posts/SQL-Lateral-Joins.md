@@ -70,9 +70,14 @@ WHERE st.id = 10170
 DROP TABLE rand_table;
 DROP TABLE series_table;
 ```
+## Results:
+The LATERAL JOIN returns results in about 2 seconds, while the regular JOIN takes about 10 seconds.
 
 In the slow (LEFT JOIN) query, the subquery is forced to return _all_ data, and then JOIN on that entire result set.  It takes a long time to grab and count the entire result set of the subquery, which considerably increases the overall query time.  In the fast (LEFT JOIN LATERAL) query, the subquery is able to reference the st.series column from a preceding item, and pare down the subquery result set to only include data that will ultimately be JOINed upon.
 
 As stated, this example is super contrived and there are definitely other ways to rewrite and improve it, but hopefully this will give you the gist of how a LATERAL JOIN should look and function.  Also note, this query speed only improved by about 5 times, however for our internal query, we were able to improve query time by an entire order of magnitude.  Depending where you use LATERAL JOINs, some queries will improve more than others.
 
 Hope that helps!
+
+#### Update (July 15, 2016):
+I updated the above test so that `rand_table` has 100 million rows of 7 character numeric strings, and `series_table` has 9,999,999 rows of 7 character numeric strings, then re-ran the test.  This time, the LATERAL JOIN finished in about 44 seconds and the regular JOIN finished in about 20 minutes and 45 seconds (--> 1,245 seconds).  This means that the LATERAL JOIN completed the query 28 times faster than the regular JOIN!
