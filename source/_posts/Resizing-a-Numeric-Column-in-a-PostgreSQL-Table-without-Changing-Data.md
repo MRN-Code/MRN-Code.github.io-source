@@ -79,3 +79,6 @@ Warning: I'm not sure if there are any side effects of doing this on your own co
 Again, many thanks to this sniptools [post](http://sniptools.com/databases/resize-a-column-in-a-postgresql-table-without-changing-data).  Without them, it would not have been possible.
 
 Hope that helps!
+
+#### Update (Sept 19, 2016):
+I was too worried about potential side effects of using this hack and opted to _not_ use it on a production environment.  Instead, I dropped 80 views, updated about 65 column data types, and then recreated the 80 views.  It required lots more work, but this way, I'm more confident in the final product.  As stated before, if you do use this hack, do so at your own risk.
