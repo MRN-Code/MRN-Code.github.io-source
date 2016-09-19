@@ -1,7 +1,7 @@
 # MRN-Code Blog Source
 
 This repo contains the source and scaffolding for the MRN-Code blog and its generator (Hexo).
-Deploying this repo with `hexo deploy` will push the public/ folder to `github.com:MRN-Code/MRN-Code.github.io`, where it will be visible on the interwebs.
+Deploying this repo with `hexo deploy` will push the public/ folder to `github.com:MRN-Code/MRN-Code.github.io`, where it will be visible on the interwebs at [http://mrn-code.github.io/](http://mrn-code.github.io/).
 
 # Add yourself as an author
 
@@ -37,5 +37,4 @@ about: Crazy excellent programmer with the Mayan Research Network
 
 # Troubleshooting
 
-* Deleted post will not dissapear: Try running `hexo clean` then `hexo deploy`.
-
+* Deleted post will not disappear (_or_ updated posts will not update): Try running `hexo clean` then `hexo deploy`.
