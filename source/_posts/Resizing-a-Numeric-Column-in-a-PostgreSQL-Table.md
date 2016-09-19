@@ -1,5 +1,5 @@
 authorId: dlandis
-title: Resizing a Numeric Column in a PostgreSQL Table without Changing Data
+title: Resizing a Numeric Column in a PostgreSQL Table
 date: 2016-09-14 12:02:59
 tags: PostgreSQL, Postgres, SQL, Databases
 ---
